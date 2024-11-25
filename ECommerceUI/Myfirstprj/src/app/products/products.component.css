@@ -1,0 +1,12 @@
+.card-body {
+    min-height: 200px; /* Adjust as needed */
+  }
+  
+  .card-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+  }
+  

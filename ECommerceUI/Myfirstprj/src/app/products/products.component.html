@@ -1,0 +1,123 @@
+<!-- <div class="my-container mx-auto">
+     Toolbar
+    <div class="border mb-5 p-3 d-flex justify-content-around">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-outline-secondary" [ngClass]="{'active': view === 'grid'}"
+                (click)="view = 'grid'">Grid</button>
+        <button type="button" class="btn btn-outline-secondary" [ngClass]="{'active': view === 'list'}"
+                (click)="view = 'list'">List</button>
+      </div>
+  
+      <div class="w-50 d-flex">
+        <span class="me-5 d-flex align-items-center fs-5 fw-bold">Sort By</span>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-outline-secondary" [ngClass]="{'active': sortby === 'default'}"
+                  (click)="sortby = 'default'; sortByPrice(sortby)">
+            Default
+          </button>
+          <button type="button" class="btn btn-outline-secondary" [ngClass]="{'active': sortby === 'htl'}"
+                  (click)="sortby = 'htl'; sortByPrice(sortby)">
+            Price (High to Low)
+          </button>
+          <button type="button" class="btn btn-outline-secondary" [ngClass]="{'active': sortby === 'lth'}"
+                  (click)="sortby = 'lth'; sortByPrice(sortby)">
+            Price (Low to High)
+          </button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="border p-5">
+       Grid View 
+      <div class="grid-view" *ngIf="view === 'grid'">
+        <div class="row g-5">
+          <div class="col-3" *ngFor="let product of products">
+            <app-product [view]="view" [product]="product"></app-product>
+          </div>
+        </div>
+      </div>
+  
+       List View 
+      <div class="list-view" *ngIf="view === 'list'">
+        <div class="row mb-5" *ngFor="let product of products">
+          <div class="col">
+            <app-product [view]="view" [product]="product"></app-product>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="container mt-3">
+    <!-- Dropdown for selecting category -->
+    <div class="dropdown mb-3">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Select Category
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <li><a class="dropdown-item" (click)="filterByCategory('mobiles')">Mobiles</a></li>
+        <li><a class="dropdown-item" (click)="filterByCategory('laptops')">Laptops</a></li>
+        <li><a class="dropdown-item" (click)="filterByCategory('all')">All</a></li>
+      </ul>
+    </div>
+  
+    <!-- Product Grid -->
+    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+      <div *ngFor="let p of filteredProducts" class="col">
+        <!-- Card with product details -->
+        <div class="card h-100">
+          <img [src]="p.img" class="card-img-top" alt="{{ p.title }}" onerror="this.src='assets/default-image.jpg'">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ p.title }}</h5>
+            <p class="card-text">{{ p.description }}</p>
+            <h5 class="card-price mt-auto">{{ p.price | currency }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+
+  9
+: 
+category
+: 
+null
+categoryId
+: 
+3
+description
+: 
+"LARGE SPACE & STORAGE – TEKAVO - L shaped with big desk panel and storage shelves can offer plenty of space for your keyboard and mouse when working, study, gaming, doing the industrial work in workstation, workbench and other home office activities. The dimension of the desk is: 130 cm (L) * 48 cm (W) * 75 cm (H). Size of the 2-tier open shelves is: Bottom shelf: 32 cm (L) * 48 cm (W), * 49.5 cm (H) which is high enough to put your computer host. Top shelf: 17 cm High. STURDY X CROSSBAR DESIGN - Sturdy X crossbar will make this corner desk more stability and durability than others desks. HIGH QUALITY & DURABLE - The corner desk is made of the high-quality heavy-duty powder coated steel frame and particle board with scratch-resistant, anti-collision design With the rustic brown and black mixed color design which make your desk looks more fashionable and stylish. EASY TO SELF-ASSEMBLE - This Desk comes with details & illustrated instructions & numbered parts, it’s easy to put it together It is Do It Yourself (DIY) type of product So, you need to assembled it by your own We are always there for assembly guidance and support. NOTE: Product comes in Multiple Packages. Customization in few elements can be done on request. T&C apply."
+imageName
+: 
+""
+offer
+: 
+null
+offerId
+: 
+1
+price
+: 
+13000
+productId
+: 
+20
+quantity
+: 
+200
+title
+: 
+"TEKAVO L Shape Corner Desk Multi-Utility Office Table Computer Desk for Home Office Engineered Wood Finish Writing Study Computer Laptop Desk Table Rustic Brown/Black – (130x48x75 cm)"
+
+
+  
